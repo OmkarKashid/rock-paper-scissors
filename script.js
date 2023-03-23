@@ -1,3 +1,4 @@
+let playAgain = true;
 const arr = ["Rock", "Paper", "Scissors"];
 let playerScore = 0;
 let computerScore = 0;
@@ -72,5 +73,10 @@ function checkWinner(){
         return "Tie";
     }
 }
-
-game();
+while(playAgain){
+    game();
+    let userResponse = prompt("Do you want to play again?(Yes/No)");
+    playAgain= (userResponse.toUpperCase() == "YES" ? true : false);
+    playerScore = 0;
+    computerScore = 0;
+}
