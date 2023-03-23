@@ -2,10 +2,14 @@ let playAgain = true;
 const arr = ["Rock", "Paper", "Scissors"];
 let playerScore = 0;
 let computerScore = 0;
+
+//Computer selects rock, paper, scissors randomly
 function getComputerChoice(arr){
     let choice = Math.floor(Math.random() * arr.length);
     return arr[choice];
 }
+
+//Game logic taht decides who wins present round and updates score
 function playRound(playerSelection, computerSelection){
     playerSelection = playerSelection.trim().toUpperCase();
     computerSelection = computerSelection.toUpperCase();
@@ -47,6 +51,7 @@ function playRound(playerSelection, computerSelection){
     }
     
 }
+
 function game(){
     while (playerScore != 5 && computerScore != 5){
         let playerSelection = prompt("Choose Rock, Paper or Scissors");
@@ -62,6 +67,8 @@ function game(){
         console.log(`${winner} Wins!`);
     }
 }
+
+//return final winner
 function checkWinner(){
     if(playerScore > computerScore){
         return "Player";
@@ -73,6 +80,7 @@ function checkWinner(){
         return "Tie";
     }
 }
+//loop to play game until user wants
 while(playAgain){
     game();
     let userResponse = prompt("Do you want to play again?(Yes/No)");
