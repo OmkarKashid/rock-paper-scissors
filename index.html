@@ -5,9 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    Let's Play Rock-Paper-Scissors!
+    <h1>Let's Play Rock-Paper-Scissors!</h1>
+    <div class="btns">
+        <div>
+            <button id="btn-rock" class="btn">
+                <img src="https://img.icons8.com/plasticine/100/null/rock.png"/>
+                <div>ROCK</div>
+            </button>
+        </div>
+        <div>
+            <button id="btn-paper" class="btn">
+                <img src="https://img.icons8.com/fluency/96/null/matt-paper.png"/>
+                <div>PAPER</div>
+            </button>
+        </div>
+        <div>
+            <button id="btn-scissors" class="btn">
+                <img src="https://img.icons8.com/office/80/null/surgical-scissors.png"/>
+                <div>SCISSORS</div>
+            </button>
+        </div>
+    </div>
+    <div id="result"></div>
+    <div id="score"></div>
+    <div id="winner"></div>
 </body>
 </html>
